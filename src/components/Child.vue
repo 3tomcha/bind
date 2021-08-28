@@ -1,7 +1,7 @@
 <template>
     <div>
         <p>child</p>
-        <input type="text" v-model="titleComputed">
+        <el-input type="text" v-model="titleComputed"/>
     </div>
 </template>
 

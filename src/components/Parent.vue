@@ -1,14 +1,14 @@
 <template>
-    <div>
+    <div v-for="(item, index) in loopObject" :key="index">
         <a href="" @click="changeTitle">parent</a>
-        <input type="text" v-model="titleComputed">
-        {{titleComputed}}
-        <Child v-model:title="titleComputed"/>
+        <el-input type="text" v-model="item.foods"/>
+        {{item.foods}}
+        <Child v-model:title="item.foods"/>
     </div>
 </template>
 
 <script>
-import { ref, defineComponent, computed } from 'vue'
+import { ref, defineComponent, computed, toRefs } from 'vue'
 import Child from './Child.vue'
 
 export default defineComponent({
@@ -26,9 +26,21 @@ export default defineComponent({
            title.value = "abc"
        }
 
+       const loopObject = [
+           {
+           foods: "gohan",
+           drink: "coke"
+           },
+           {
+           foods: "dorayaki",
+           drink: "ocha"
+           },
+       ]
+
        return {
            titleComputed,
-           changeTitle
+           changeTitle,
+           loopObject
        }
     },
 })
