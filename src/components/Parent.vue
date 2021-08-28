@@ -26,7 +26,7 @@ export default defineComponent({
            title.value = "abc"
        }
 
-       const loopObject = [
+       const loopObject = ref([
            {
            foods: "gohan",
            drink: "coke"
@@ -35,7 +35,8 @@ export default defineComponent({
            foods: "dorayaki",
            drink: "ocha"
            },
-       ]
+       ])
+       
 
        return {
            titleComputed,
