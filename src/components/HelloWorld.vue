@@ -34,11 +34,22 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 
+type Nantoka = {
+  nantoka: "abc"
+}
 export default defineComponent({
   name: 'HelloWorld',
   props: {
     msg: String,
   },
+  setup() {
+    const nantoka: Nantoka = {
+      gohan: "taberu"
+    };
+    return {
+      nantoka
+    }
+  }
 });
 </script>
 
