@@ -1,24 +1,9 @@
-# vue_typescript
+# Run dev server by vite (https)
+npm run dev
 
-## Project setup
-```
-npm install
-```
+# Check Typescript type
+npm run typecheck
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
+# Build(CI)
 npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+(Check Typescript type and build)
